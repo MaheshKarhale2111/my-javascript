@@ -52,3 +52,17 @@ const dayone = document.querySelector('.days')
 // it comes in optimization, imagine a big dom tree, to find parent you don't need to travel tree again. 
 console.log(dayone.parentElement) 
 console.log(dayone.nextElementSibling) 
+
+
+// how powerful is query selector 
+// you can use css in queryselector as well 
+
+const secondChild = document.querySelector(".days:nth-child(2)")
+// important fact about nthchild 
+// it selects siblings and not direct childs 
+// say we have 4 divs with class .days 
+// .days:nth-child(2) will select 2nd one with class .days
+
+console.log(secondChild);
+// to delete you can use remove()
+secondChild.remove(); 

@@ -33,3 +33,20 @@ String(123);          // "123"
 
 String(null);         // "null"
 null.toString();      // TypeError: Cannot read properties of null
+
+
+
+// about toString()
+
+/*
+1. toString() method when used on arrays or nested arrays it flatten the array  
+*/
+console.log([1, 2, [3, 4]].toString()); // "1,2,3,4" , nested array is flattened 
+
+// 2. null and undefined values are treated as empty string for toString() method
+console.log([null, undefined].toString()); // reurns ","
+
+// 3. objects can'be converted by using this method 
+console.log({name : "mahesh"}.toString()) // returns "[object,Object]"
+// then how to convert objects to string 
+console.log(JSON.stringify({ name: "Mahesh" }));  // '{"name":"Mahesh"}'
